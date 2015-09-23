@@ -37,8 +37,8 @@ XTENSA_TOOLS_ROOT, SDK_EXTRA_INCLUDES, SDK_EXTRA_LIBS, SDK_ROOT, SDK_VERSION
 4. git submodule update
 
 Note: I recommend to change manually lib\heatshrink\heatshrink_config.h to use:
-#define HEATSHRINK_MALLOC(SZ) os_malloc(SZ)
-#define HEATSHRINK_FREE(P, SZ) os_free(P)
+"#define HEATSHRINK_MALLOC(SZ) os_malloc(SZ)"
+"#define HEATSHRINK_FREE(P, SZ) os_free(P)"
 just in case to prevent compiling errors.
 
 ### Compiling ###
