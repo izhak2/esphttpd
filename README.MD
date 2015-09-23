@@ -1,101 +1,51 @@
 ![new esphttpd](https://github.com/izhak2/esphttpd/blob/master/images/screenshot.png)
 
-esp-httpd OTA Edition README
-################################
-This is mostly just mods to Spritemods esphttpd
-I have added the OTA functionality and a few other common requests, but the below is all still true
+# esp-httpd #
+### Background ###
+Web-server for Espressif ESP8266/EX chips.
+Spritemods started the project, and it was continued by billprozac which added OTA functionality and few more things.
+me, izhak2, re-wrote the whole project, fixed and added few more other things.
 
-*** Note *** I move to using esptool.py, so the process of flashing is much easier.  
-There is no more resetting involved. The whole process is much easier.
-################################
+### Firmware features ###
+* Web server
+  * Multiple connections
+  * CGI routines
+  * HTML tokens replacement
+* Filesystem support
+  * Compression support (Heatshrink)
+* OTA
+* **Documentation and code-readability**
 
-This is a small but powerful webserver for ESP8266(EX) chips. Included is an example of how
-to make a module that can have the AP it connects to configured over a webbrowser.
+### Changelog ###
+For changelog from billprozac's version look at changelog.txt
 
-ABOUT THE WEBSERVER
+### Sample project ###
+* web-server available at 192.168.4.1.
+* GPIOs are reset to state 0 on initialization.
+* index.tpl displays a sample switch which changes its state on-click, and keeps its state on server-side
+  * the switch on index.tpl controls both GPIOs' states
+* WiFi settings enable switching between modes as usual
 
-The Good (aka: what's awesome)
- - Supports multiple connections, for eg simultaneous html/css/js/images downloading
- - Static files stored in flash, in an (optionally compressed) RO filesystem
- - Pluggable using external cgi routines
- - Simple template engine for mixed c and html things
- - Supports OTA building and flashing
- - Supports quickly changing build SDKs by changing SDK_VERSION
+### Setup ###
+Follow instructions on https://github.com/pfalcon/esp-open-sdk, then customize makefile parameters to match your own environment:
+XTENSA_TOOLS_ROOT, SDK_EXTRA_INCLUDES, SDK_EXTRA_LIBS, SDK_ROOT, SDK_VERSION
 
-The Bad (aka: what can be improved)
- - Not built for speediness, although it's reasonable fast.
- - Built according to what I remember of the HTTP protocol, not according to the
-   RFCs. Should work with most modern browsers, though.
- - No support for https.
- - Code written by me... sorry in advance ;)
+### Git ###
+1. git clone https://github.com/izhak2/esphttpd
+2. cd esphttpd
+3. git submodule init
+4. git submodule update
 
-The Ugly (aka: bugs, misbehaviour)
-- Possible buffer overflows (usually not remotely exploitable) due to no os_snprintf
-  This can be theoretically remedied by either Espressif including an os_snprintf in 
-  their libs or by using some alternate printf lib, like elm-chans xprintf
+Note: I recommend to change manually lib\heatshrink\heatshrink_config.h to use:
+#define HEATSHRINK_MALLOC(SZ) os_malloc(SZ)
+#define HEATSHRINK_FREE(P, SZ) os_free(P)
+just in case to prevent compiling errors.
 
-ABOUT THE EXAMPLE
+### Compiling ###
+To compile an OTA version:
+make clean
+make rawflash OTA=true
 
-When you flash the example into an ESP8266(EX) module, you get a small webserver with a few example
-pages. If you've already connected your module to your WLAN before, it'll keep those settings. When
-you haven't or the settings are wrong, keep GPIO0 for >5 seconds. The module will reboot into
-its STA+AP mode. Connect a computer to the newly formed access point and browse to 
-http://192.168.4.1/wifi in order to connect the module to your WiFi network. The example also
-allows you to control a LED that's connected to GPIO2.
-
-BUILDING EVERYTHING
-
-For this, you need an environment that can compile ESP8266 firmware. Environments for this still
-are in flux at the moment, but I'm using esp-open-sdk: https://github.com/pfalcon/esp-open-sdk .
-You probably also need an UNIX-like system; I'm working on Debian Linux myself. 
-
-To manage the paths to all this, you can source a small shell fragment into your current session. For
-example, I source a file with these contents:
-export PATH=${PWD}/esp-open-sdk/xtensa-lx106-elf/bin:$PATH
-export SDK_ROOT=${PWD}/esp-open-sdk/
-export SDK_VERSION=1.0.0
-export ESPTOOLPY=${PWD}/esptool/esptool.py
-export ESPPORT=/dev/ttyUSB0
-export ESPBAUD=460800
-export ESP_IPADDRESS=192.168.4.1 // When the device is up and connected to your AP, this IP can be used for OTA flashes
-
-Actual setup of the SDK and toolchain is out of the scope of this document, so I hope this helps you
-enough to set up your own if you haven't already. 
-
-If you have that, you can clone out the source code:
-git clone https://github.com/billprozac/esphttpd
-
-(original upstream source) http://git.spritesserver.nl/esphttpd.git/
-
-This project makes use of heatshrink, which is a git submodule. To fetch the code:
-cd esphttpd
-git submodule init
-git submodule update
-
-You should then modify the file lib/heatshrink/heatshrink_decoder.h and change line 4 from 
-#include <stdint.h>
-to
-//#include <stdint.h>
-
-Now, build the code and pack the static files for the website:
-make
-make flash
-
-You should have a working webserver now.
-
-WRITING CODE FOR THE WEBSERVER
-
-...errm... to be done. For now, look at the examples. Hey, you probably managed to find out how
-the SDK works, this shouldn't be too hard :P
-
-
-CHANGE FROM SDK 0.9.3 (and earlier) TO SDK 0.9.4 (and later):
-Change all occurences of
-espconn_sent(connData->conn, (uint8 *)buff, len);
-to
-httpdSend(connData, buff, len)
-please. The reason for this is that you can't do multiple espconn_sent calls serially anymore, so
-httpd needs to buffer the writes now. This is only needed in your own code; the code that comes
-with httpd already has this changed.
-
-
+### Development ###
+As web server is pretty useful for IOT usages, especially on this chip, I hope you find this version easy to adapt for your own purpose.
+I plan to expand the feature list to make this distribution more useful, so feel free to contact me either for bugs found or with ideas for new features.
