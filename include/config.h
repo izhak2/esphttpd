@@ -45,8 +45,8 @@
 #define	USER_MAIN_DEBUG
 
 /* hotspot settings */
-#define	HOTSPOT_SSID_STRING		"EscapeRoom_"
-#define	HOTSPOT_PASSWORD_STRING	"escaper00m"
+#define	HOTSPOT_SSID_STRING		"ESPHTTPD"
+#define	HOTSPOT_PASSWORD_STRING	"12345678"
 
 /* httpd settings */
 #define HTTPD_MAX_CONNECTIONS	8		//Max amount of connections
