@@ -5,7 +5,7 @@
 Web-server for Espressif ESP8266/EX chips.
 Spritemods started the project, and it was continued by billprozac which added OTA functionality and few more things.
 
-me, izhak2, re-wrote the whole project, fixed and added few more other things.
+I, izhak2, re-wrote the whole project, fixed and added few more other things.
 
 ### Firmware features ###
 * Web server
@@ -29,6 +29,7 @@ For changelog from billprozac's version look at changelog.txt
 
 ### Setup ###
 Follow instructions on https://github.com/pfalcon/esp-open-sdk, then customize makefile parameters to match your own environment:
+
 XTENSA_TOOLS_ROOT, SDK_EXTRA_INCLUDES, SDK_EXTRA_LIBS, SDK_ROOT, SDK_VERSION
 
 ### Git ###
@@ -40,12 +41,16 @@ XTENSA_TOOLS_ROOT, SDK_EXTRA_INCLUDES, SDK_EXTRA_LIBS, SDK_ROOT, SDK_VERSION
 Note: I recommend to change manually lib\heatshrink\heatshrink_config.h to use:
 
 "#define HEATSHRINK_MALLOC(SZ) os_malloc(SZ)"
+
 "#define HEATSHRINK_FREE(P, SZ) os_free(P)"
+
 just in case to prevent compiling errors.
 
 ### Compiling ###
 To compile an OTA version:
+
 make clean
+
 make rawflash OTA=true
 
 ### Development ###
