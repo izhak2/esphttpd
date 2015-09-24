@@ -47,7 +47,8 @@ Note: I recommend to change manually lib\heatshrink\heatshrink_config.h to use:
 just in case to prevent compiling errors.
 
 ### Compiling ###
-To compile an OTA version:
+Have a look at config.h to set your own build settings, then compile as usual.
+For example, to compile an OTA version:
 
 make clean
 
