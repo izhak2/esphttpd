@@ -33,7 +33,8 @@ Follow instructions on https://github.com/pfalcon/esp-open-sdk, then customize m
 * XTENSA_TOOLS_ROOT
 * SDK_EXTRA_INCLUDES
 * SDK_EXTRA_LIBS
-* SDK_ROOT, SDK_VERSION
+* SDK_ROOT
+* SDK_VERSION
 
 ### Git ###
 * git clone https://github.com/izhak2/esphttpd
