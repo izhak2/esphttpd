@@ -1,5 +1,5 @@
 ###############################################
-#   dummy libcurl wrapper for flashing ota    #
+#   dummy libcurl wrapper for ota flashing    #
 #   by izhak2@gmail.com                       #
 ###############################################
 
