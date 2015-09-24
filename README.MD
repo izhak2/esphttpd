@@ -3,7 +3,7 @@
 # esp-httpd #
 ### Background ###
 Web-server for Espressif ESP8266/EX chips.
-Spritemods started the project, and it was continued by billprozac which added OTA functionality and few more things.
+Spritemods started the project and billprozac continued, adding OTA functionality and few more things.
 
 I, izhak2, re-wrote the whole project, fixed and added few more other things.
 
@@ -18,17 +18,17 @@ I, izhak2, re-wrote the whole project, fixed and added few more other things.
 * **Documentation and code-readability**
 
 ### Changelog ###
-For changelog from billprozac's version look at changelog.md
+For changelog from billprozac's version look at changelog.md.
 
 ### Sample project ###
-* web-server available at 192.168.4.1.
-* GPIOs are reset to state 0 on initialization.
+* web-server available at 192.168.4.1
+* GPIOs are reset to state 0 on initialization
 * index.tpl displays a sample switch which changes its state on-click, and keeps its state on server-side
   * the switch on index.tpl controls both GPIOs' states
 * WiFi settings enable switching between modes as usual
 
 ### Setup ###
-Follow instructions on https://github.com/pfalcon/esp-open-sdk, then customize makefile parameters to match your own environment:
+Follow the instructions on https://github.com/pfalcon/esp-open-sdk, then customize makefile parameters to match for your own environment:
 
 * XTENSA_TOOLS_ROOT
 * SDK_EXTRA_INCLUDES
@@ -50,7 +50,7 @@ Note: I recommend to change manually lib\heatshrink\heatshrink_config.h to use:
 just in case to prevent compiling errors.
 
 ### Compiling ###
-Have a look at config.h to set your own build settings, then compile as usual.
+Have a look at config.h and set your own settings, then compile as usual.
 For example, to compile an OTA version:
 
 make clean
@@ -58,7 +58,7 @@ make clean
 make rawflash OTA=true
 
 ### Development ###
-As web server is pretty useful for IOT usages, especially on this chip, I hope you find this version easy to adapt for your own needs.
-I plan to expand the feature list to make this distribution more useful, so feel free to contact me either for bugs found or with ideas for new features.
+As web server is pretty useful for IOT usages, especially on this chip, I hope you find my project as a convenient starting point.
+I plan to expand the supported feature list to make it even more useful, so feel free to contact me either for bugs found or with ideas for new features.
 
 <izhak2@gmail.com>
