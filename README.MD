@@ -30,7 +30,10 @@ For changelog from billprozac's version look at changelog.md
 ### Setup ###
 Follow instructions on https://github.com/pfalcon/esp-open-sdk, then customize makefile parameters to match your own environment:
 
-XTENSA_TOOLS_ROOT, SDK_EXTRA_INCLUDES, SDK_EXTRA_LIBS, SDK_ROOT, SDK_VERSION
+* XTENSA_TOOLS_ROOT
+* SDK_EXTRA_INCLUDES
+* SDK_EXTRA_LIBS
+* SDK_ROOT, SDK_VERSION
 
 ### Git ###
 1. git clone https://github.com/izhak2/esphttpd
