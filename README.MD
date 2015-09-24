@@ -36,10 +36,10 @@ Follow instructions on https://github.com/pfalcon/esp-open-sdk, then customize m
 * SDK_ROOT, SDK_VERSION
 
 ### Git ###
-1. git clone https://github.com/izhak2/esphttpd
-2. cd esphttpd
-3. git submodule init
-4. git submodule update
+* git clone https://github.com/izhak2/esphttpd
+* cd esphttpd
+* git submodule init
+* git submodule update
 
 Note: I recommend to change manually lib\heatshrink\heatshrink_config.h to use:
 
