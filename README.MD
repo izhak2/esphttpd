@@ -57,3 +57,5 @@ make rawflash OTA=true
 ### Development ###
 As web server is pretty useful for IOT usages, especially on this chip, I hope you find this version easy to adapt for your own purpose.
 I plan to expand the feature list to make this distribution more useful, so feel free to contact me either for bugs found or with ideas for new features.
+
+<izhak2@gmail.com>
