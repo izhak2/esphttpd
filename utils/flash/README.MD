@@ -1,4 +1,4 @@
-# Flash utils
+# Flash utilities
 
 ### ESP8266Flasher.exe ###
 NodeMCU original flasher.
