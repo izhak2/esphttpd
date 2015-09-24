@@ -4,5 +4,5 @@
 NodeMCU original flasher.
 
 ### ota_flasher.py ###
-Dummy wrapper to libcurl.exe to provide easy OTA flashing.
+Dummy wrapper to **libcurl.exe** to provide easy OTA flashing.
 Given the ESP8266 IP it provides the ability to flash either a firmware binary or a filesystem espfs file.
