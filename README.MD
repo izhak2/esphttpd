@@ -43,9 +43,8 @@ Follow instructions on https://github.com/pfalcon/esp-open-sdk, then customize m
 
 Note: I recommend to change manually lib\heatshrink\heatshrink_config.h to use:
 
-"#define HEATSHRINK_MALLOC(SZ) os_malloc(SZ)"
-
-"#define HEATSHRINK_FREE(P, SZ) os_free(P)"
+* #define HEATSHRINK_MALLOC(SZ) os_malloc(SZ)
+* #define HEATSHRINK_FREE(P, SZ) os_free(P)
 
 just in case to prevent compiling errors.
 
@@ -58,7 +57,7 @@ make clean
 make rawflash OTA=true
 
 ### Development ###
-As web server is pretty useful for IOT usages, especially on this chip, I hope you find this version easy to adapt for your own purpose.
+As web server is pretty useful for IOT usages, especially on this chip, I hope you find this version easy to adapt for your own needs.
 I plan to expand the feature list to make this distribution more useful, so feel free to contact me either for bugs found or with ideas for new features.
 
 <izhak2@gmail.com>
