@@ -18,7 +18,7 @@ I, izhak2, re-wrote the whole project, fixed and added few more other things.
 * **Documentation and code-readability**
 
 ### Changelog ###
-For changelog from billprozac's version look at changelog.txt
+For changelog from billprozac's version look at changelog.md
 
 ### Sample project ###
 * web-server available at 192.168.4.1.
