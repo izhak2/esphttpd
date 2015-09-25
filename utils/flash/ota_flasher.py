@@ -40,4 +40,4 @@ if  __name__ == "__main__":
     if len(sys.argv) < 2:
         print 'Usage: %s esp_ip' % sys.argv[0]
     else:
-        return main(sys.argv[1])
+        main(sys.argv[1])
