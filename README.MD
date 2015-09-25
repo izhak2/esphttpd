@@ -28,6 +28,7 @@ For changelog from billprozac's version look at changelog.md.
 * WiFi settings enable switching between modes as usual
 
 ### Setup ###
+Step-by-step guide available [here](iotplayground.blogspot.com/2015/09/introduction-to-esp8266ex-development.html).
 Follow the instructions on https://github.com/pfalcon/esp-open-sdk, then customize makefile parameters to match for your own environment:
 
 * XTENSA_TOOLS_ROOT
