@@ -46,7 +46,7 @@ int ICACHE_FLASH_ATTR cgiReadFlash(HttpdConnection *	ptConnection)
 		/* update offset */
 		*iFlashOffset = 0x40200000;
 
-		iRet = HTTPD_CGI_DONE;
+		iRet = HTTPD_CGI_MORE;
 		goto lblCleanup;
 	}
 	
