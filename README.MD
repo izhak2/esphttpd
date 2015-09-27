@@ -5,7 +5,7 @@
 Web-server for Espressif ESP8266/EX chips.
 Spritemods started the project and billprozac continued, adding OTA functionality and few more things.
 
-I, izhak2, re-wrote the whole project, fixed and added few more other things.
+I re-wrote the whole project, fixed and added few more other things.
 
 ### Firmware features ###
 * Web server
@@ -64,3 +64,4 @@ As web server is pretty useful for IOT usages, especially on this chip, I hope y
 I plan to expand the supported feature list to make it even more useful, so feel free to contact me either for bugs found or with ideas for new features.
 
 <izhak2@gmail.com>
+<tak2bnk@gmail.com>
