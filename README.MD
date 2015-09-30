@@ -19,7 +19,8 @@ I re-wrote the whole project, fixed and added few more other things.
 
 ### Changelog ###
 For changelog from [billprozac](https://github.com/billprozac/esphttpd)'s version look at changelog.md.
-Main esphttpd is available at [Sprite](https://github.com/Spritetm/esphttpd)'s git.
+
+Main esphttpd development by Sprite is available at [Sprite](https://github.com/Spritetm/esphttpd)'s git.
 
 ### Sample project ###
 * web-server available at 192.168.4.1
@@ -61,7 +62,7 @@ make clean
 make rawflash OTA=true
 
 ### Development ###
-Main project is available at [Sprite](https://github.com/Spritetm/esphttpd)'s git. I decided to share my work just in case someone might find it useful for his own needs. I'll be updating it sometimes; if you'd like some features to be added to this version, or meet any bugs, feel free to contact me.
+Main project is available at [Sprite](https://github.com/Spritetm/esphttpd)'s git. I decided to share my work in case someone will find it useful for his own needs. I'll be updating it sometimes; if you'd like some features to be added or meet any bugs, feel free to contact me.
 
 <izhak2@gmail.com>
 <tak2bnk@gmail.com>
