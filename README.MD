@@ -3,7 +3,7 @@
 # esp-httpd #
 ### Background ###
 Web-server for Espressif ESP8266/EX chips.
-Spritemods started the project and billprozac continued, adding OTA functionality and few more things.
+[Sprite](https://github.com/Spritetm/esphttpd) started the project and [billprozac](https://github.com/billprozac/esphttpd) continued, adding OTA functionality and few more things.
 
 I re-wrote the whole project, fixed and added few more other things.
 
@@ -18,7 +18,8 @@ I re-wrote the whole project, fixed and added few more other things.
 * **Documentation and code-readability**
 
 ### Changelog ###
-For changelog from billprozac's version look at changelog.md.
+For changelog from [billprozac](https://github.com/billprozac/esphttpd)'s version look at changelog.md.
+Main esphttpd is available at [Sprite](https://github.com/Spritetm/esphttpd)'s git.
 
 ### Sample project ###
 * web-server available at 192.168.4.1
@@ -30,7 +31,7 @@ For changelog from billprozac's version look at changelog.md.
 ### Setup ###
 Step-by-step guide is available [here](http://iotplayground.blogspot.com/2015/09/introduction-to-esp8266ex-development.html).
 
-In short, follow the instructions on https://github.com/pfalcon/esp-open-sdk, then customize makefile parameters to match for your own environment:
+In short, follow the instructions on [esp-open-sdk](https://github.com/pfalcon/esp-open-sdk), then customize makefile parameters to match for your own environment:
 
 * XTENSA_TOOLS_ROOT
 * SDK_EXTRA_INCLUDES
@@ -60,8 +61,7 @@ make clean
 make rawflash OTA=true
 
 ### Development ###
-As web server is pretty useful for IOT usages, especially on this chip, I hope you find my project as a convenient starting point.
-I plan to expand the supported feature list to make it even more useful, so feel free to contact me either for bugs found or with ideas for new features.
+Main project is available at [Sprite](https://github.com/Spritetm/esphttpd)'s git. I decided to share my work just in case someone might find it useful for his own needs. I'll be updating it sometimes; if you'd like some features to be added to this version, or meet any bugs, feel free to contact me.
 
 <izhak2@gmail.com>
 <tak2bnk@gmail.com>
